@@ -8,6 +8,8 @@
     --background-color: #AC929A;
     --background-color-light: #C9B2BA;
     --text-color: #FAFAFF;
+    --bg-primary-button: #312a2c;
+    --color-bg-popup: #312B2D;
 
     --red: #FFA07A;
     --blue: #ADD8E6;
@@ -15,7 +17,6 @@
     --yellow: #ECECCB;
     --green: #98FB98;
     --purple: #E6E6FA;
-
 }
 
 body {
@@ -23,6 +24,8 @@ body {
     background-color: var(--background-color);
     color: var(--text-color);
 }
+
+/* Util classes */
 
 .flex-center {
     display: flex;
@@ -34,12 +37,44 @@ body {
     border: 1px solid red;
 }
 
+/* Header */
+
 header {
-    /* position: fixed; */
-    /* top: 0; */
-    width: 100%;
+    width: 60%;
+    max-width: 500px;
+    margin: auto;
     height: 60px;
 }
+
+#head{
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn{
+    border: none;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+    
+}
+
+.btn-primary{
+    color: var(--text-color);
+    background-color: var(--bg-primary-button);
+}
+
+.btn-square{
+    width: 32px;
+    height: 32px;
+}
+
+.pointer:hover{
+    cursor: pointer;
+}
+
+/* Game */
 
 #wrap {
     width: 100vw;
@@ -48,6 +83,7 @@ header {
     flex-direction: column;
     align-items: center;
 }
+
 
 main {
     width: 60%;
@@ -60,6 +96,8 @@ main {
     padding-bottom: 30px;
 
 }
+
+/* Info header */
 
 #end-message{
     text-align: center;
@@ -84,6 +122,8 @@ main {
     border: 1px solid #7C686D;
 }
 
+/* Colors container */
+
 #colors {
     display: flex;
     justify-content: space-around;
@@ -97,6 +137,8 @@ main {
 #history{
     flex: 1;
 }
+
+/* Hosues */
 
 .circle {
     width: 48px;
@@ -136,6 +178,54 @@ main {
     display: none;
 }
 
+/* popup */
+
+#popup-canva{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+#popup-rules{
+    padding: 1.5rem;
+    color: var(--text-color);
+    background-color: var(--color-bg-popup);
+    width: 90vw;
+    max-width: 720px;
+    border-radius: 0.5rem;
+    display: none;
+}
+
+.rules-header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.rule-body{
+    width: 95%;
+    margin: auto;
+    margin-top: 1.2rem;
+}
+
+.rule-body p{
+    margin-bottom: 1rem;
+    color: var(--color-text-popup);
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.35rem;
+}
+
+#btn-rules-close{
+    display: block;
+}
+
+/* media */
 @media screen and (max-width: 700px) {
     main {
         width: 95%;
@@ -143,6 +233,11 @@ main {
 }
 
 @media screen and (max-width: 400px) {
+
+    header {
+        width: 95%;
+    }
+
     .circle {
         width: 36px;
         height: 36px;

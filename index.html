@@ -1,16 +1,24 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="assets/guess-icon.png">
     <title>Guess</title>
 </head>
+
 <body>
     <div id="wrap" class="">
-        <header class="flex-center">
+        <header id="head" class="flex-center">
+            <span></span>
             <h1>GUESS</h1>
+            <button id="rules" class="btn btn-square btn-primary pointer flex-center">
+                <i class="fa-solid fa-question"></i>
+            </button>
         </header>
         <main class="">
             <div id="end-message" class="hidden">
@@ -36,11 +44,38 @@
                 <div id="purple" class="circle flex-center"></div> -->
             </div>
             <div id="history">
-                
+
             </div>
         </main>
     </div>
+    <div id="popup-canva">
+        <div id="popup-rules">
+            <div class="rules-header">
+                <h3>Regras</h3>
+                <button id="btn-rules-close" class="btn btn-square pointer btn-primary flex-center">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="rule-body">
+                <p>
+                    Aqui está uma lista de cores.
+                </p>
+                <p>
+                    Existe uma lista de cores secreta que está em outra ordem.
+                </p>
+                <p>
+                    O objetivo trocar as cores visíveis até toda a lista ficar igual a secreta.
+                </p>
+                <p>
+                    A dica são quantas cores estão certas a cada troca feita.
+                </p>
+            </div>
+        </div>
+    </div>
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="https://kit.fontawesome.com/d49239e0c9.js" crossorigin="anonymous"></script>
     <script src="js/script.js"></script>
+    <script src="js/popup.js"></script>
 </body>
+
 </html>
